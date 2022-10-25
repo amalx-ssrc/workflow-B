@@ -1,0 +1,17 @@
+name: Download artifact
+
+on: workflow_call
+
+jobs:
+  Downloadtheartifact:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download the artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: manifest
+      - name: Display artifact
+        run: | 
+          ls
+          ls manifest
